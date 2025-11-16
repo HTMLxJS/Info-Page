@@ -1,0 +1,142 @@
+/* Variables remain the same */
+:root {
+    --bg-color: #0c0c1e;        /* Deep Navy Blue */
+    --card-color: #1a1a36;      /* Slightly Lighter Navy */
+    --text-color: #f0f4f8;      /* Off-White */
+    --accent-color: #00bcd4;    /* Vibrant Cyan */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    user-select: none;
+    position: relative;
+    font-family: 'Inter', sans-serif; /* Use a modern font, assumed to be default */
+}
+
+/* --- ADVANCED BACKGROUND: CODE PARTICLE EFFECT (Subtle, professional) --- */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.1; 
+    background: 
+        radial-gradient(circle at 10% 10%, #00bcd4 1px, transparent 0),
+        radial-gradient(circle at 90% 90%, #00bcd4 1px, transparent 0),
+        radial-gradient(circle at 30% 70%, #00bcd4 1px, transparent 0),
+        radial-gradient(circle at 70% 30%, #00bcd4 1px, transparent 0);
+    background-size: 50px 50px;
+    animation: backgroundMove 60s linear infinite;
+}
+
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 500px 500px; }
+}
+
+/* --- ADVANCED TYPOGRAPHY & ANIMATION --- */
+.main-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-color);
+    /* NEON GLOW */
+    text-shadow: 0 0 7px rgba(0, 188, 212, 0.9), 
+                 0 0 15px rgba(0, 188, 212, 0.6);
+    animation: neon-glow 2s ease-in-out infinite alternate;
+}
+@keyframes neon-glow {
+    from { text-shadow: 0 0 5px rgba(0, 188, 212, 0.9), 0 0 10px rgba(0, 188, 212, 0.5); }
+    to { text-shadow: 0 0 10px rgba(0, 188, 212, 1), 0 0 20px rgba(0, 188, 212, 0.7); }
+}
+
+.sub-heading {
+    color: #94a3b8;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    height: 1.5em; 
+    white-space: nowrap;
+}
+.cursor {
+    animation: blink 0.7s infinite;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 188, 212, 0.3);
+}
+
+/* --- ADVANCED CARD STYLES & INTERACTIONS --- */
+
+/* Card Base */
+.info-card, .credit-card, .source-card {
+    background-color: var(--card-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+    /* Hide the card border glow on mobile for performance and cleaner look */
+    @media (max-width: 1024px) {
+        .info-card::before, .credit-card::before { display: none; }
+    }
+}
+
+/* Card Glow Effect (Conic gradient border) */
+.info-card::before, .credit-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, rgba(0, 188, 212, 0.6), transparent);
+    animation: rotate 8s linear infinite;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+}
+.info-card:hover::before, .credit-card:hover::before { opacity: 0.5; }
+@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Parallax Inner Wrapper (Essential for the 2-layer 3D effect) */
+.parallax-inner {
+    transition: transform 0.1s ease-out; 
+}
+
+/* Source Card Success Feedback */
+@keyframes flash {
+    0% { background-color: rgba(0, 188, 212, 0.3); }
+    50% { background-color: rgba(0, 188, 212, 0.7); }
+    100% { background-color: rgba(0, 188, 212, 0.3); }
+}
+.animate-success {
+    animation: flash 0.5s ease-out 1;
+}
+
+/* Scroll-Reveal Animation Classes */
+.animate-hidden { 
+    opacity: 0; 
+    transform: translateY(40px) scale(0.95); 
+}
+.animate-fade-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloo Khalo | Advanced Info</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen font-sans antialiased">
+    
+    <div id="particle-background"></div>
+
+    <a href="https://aiocalculator.page.gd" class="back-btn z-50">
+        <i class="fas fa-arrow-left mr-2"></i> Back to Current Project
+    </a>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 py-20">
+        
+        <header class="text-center mb-16 pt-8">
+            <h1 id="title" class="main-title">Aloo Khalo</h1>
+            <p class="sub-heading">
+                <span id="typing-text"></span><span id="cursor" class="cursor">|</span>
+            </p>
+        </header>
+
+        <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+
+            <section id="owner-card" class="info-card lg:col-span-2 mb-12 lg:mb-0 animate-hidden">
+                <div class="parallax-inner"> 
+                    <div class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-12">
+                        
+                        <div class="flex-shrink-0 mx-auto md:mx-0 pt-4">
+                            <div class="profile-avatar">
+                                <i class="fas fa-seedling fa-4x text-cyan-400"></i> 
+                            </div>
+                            <h3 class="text-lg font-bold text-center mt-3 text-cyan-400">The Creator: Ranjan</h3>
+                        </div>
+                        
+                        <div class="text-center md:text-left w-full">
+                            <h2 class="text-3xl font-bold mb-4 text-cyan-400">Our Core Mission</h2>
+                            <ul class="text-gray-300 leading-relaxed space-y-3 list-disc list-inside text-left">
+                                <li class="mission-item">To create <strong>minimalist, high-performance</strong> utility applications.</li>
+                                <li class="mission-item">To deliver complex functionality using <strong>lightweight, client-side</strong> web technologies.</li>
+                                <li class="mission-item">To prioritize <strong>speed, stability</strong>, and an intuitive user experience on all devices.</li>
+                                <li class="mission-item">To establish a standard for <strong>clean code architecture</strong> and minimal dependencies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="source-code-section" class="lg:col-span-1 mb-12 lg:mb-0 animate-hidden">
+                <div class="source-card text-center h-full flex flex-col justify-center p-8 transition-transform duration-300 hover:scale-[1.03] shadow-2xl bg-cyan-900/20 border border-cyan-500/30">
+                    <h3 class="text-2xl font-extrabold mb-3 text-cyan-400 flex items-center justify-center">
+                        <i class="fas fa-code mr-3"></i> Get Source Code
+                    </h3>
+                    <p class="text-md text-gray-200 mb-4">
+                        We believe in open development. Access the full repository by connecting with us.
+                    </p>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                        <p class="text-xl font-mono text-green-400">
+                            Discord: <span class="text-white font-bold discord-username">Aloo.khalo</span>
+                        </p>
+                        <p class="text-sm text-gray-400 mt-2">
+                            <strong>Click to Copy Username</strong> | DM for Repo Link
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <section id="creator-story" class="info-card mt-12 animate-hidden">
+            <div class="p-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-cyan-400">The Developer's Journey</h2>
+                <p class="text-gray-300 leading-relaxed text-lg italic max-w-3xl mx-auto">
+                    "Driven by an unwavering passion for coding, Ranjan began building projects as a teenager. Every application created under the Aloo Khalo banner is a step in a pragmatic journey, focused on <strong>earning through practical development</strong> and mastering clean architecture. This real-world experience is the direct path to achieving the ultimate goal: becoming a professional <strong>Software Engineer</strong>. Every line of code written here is an investment in that future."
+                </p>
+                <div class="mt-6 text-xl">
+                    <span class="font-semibold text-green-400">Motto:</span> 
+                    <span class="text-gray-200">Building skills, building a future, one project at a time.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-links" class="mt-12 animate-hidden">
+            <h2 class="section-title">Connect & Follow the Journey</h2>
+            <div class="credit-card p-8">
+                <ul class="space-y-6 text-lg text-left">
+                    
+                    <li class="flex items-start">
+                        <i class="fab fa-discord fa-2x text-indigo-400 mt-1 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-xl text-indigo-300 mb-1">
+                                Discord: <a href="https://discord.com/users/aloo.khalo" target="_blank" class="hover:underline"><strong>aloo.khalo</strong></a>
+                            </p>
+                            <p class="text-gray-400">
+                                <strong>Platform Description:</strong> A real-time chat service used for direct communication, community support, and getting the source code links.
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start">
+                        <i class="fab fa-youtube fa-2x text-red-500 mt-1 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-xl text-red-400 mb-1">
+                                YouTube: <a href="https://www.youtube.com/@HTMLxJS" target="_blank" class="hover:underline"><strong>@HTMLxJS</strong></a>
+                            </p>
+                            <p class="text-gray-400">
+                                <strong>Platform Description:</strong> Where I share tutorials, project showcases, and development insights related to web technologies and my projects.
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start">
+                        <i class="fab fa-github fa-2x text-gray-400 mt-1 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-xl text-gray-300 mb-1">
+                                GitHub: <a href="https://github.com/HTMLxJS" target="_blank" class="hover:underline"><strong>HTMLxJS</strong></a>
+                            </p>
+                            <p class="text-gray-400">
+                                <strong>Platform Description:</strong> The core repository for my public code, portfolio, and version control for all Aloo Khalo applications.
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start opacity-60">
+                        <i class="fab fa-instagram fa-2x text-pink-500 mt-1 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-xl text-pink-400 mb-1">
+                                Instagram: (Upcoming)
+                            </p>
+                            <p class="text-gray-400">
+                                <strong>Platform Description:</strong> Future hub for visual updates, behind-the-scenes content, and quick announcements about new projects.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="credits-section" class="mt-16 animate-hidden">
+            <h2 class="section-title">Universal Technology Stack & Credits</h2>
+
+            <div class="flex flex-wrap lg:flex-nowrap gap-8">
+                
+                <div class="credit-card flex-1 min-w-[45%] md:min-w-[300px]">
+                    <div class="parallax-inner">
+                        <h3 class="text-xl font-semibold mb-3 border-b border-cyan-700 pb-2 text-cyan-300">Front-End & Runtime</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="credit-item"><i class="fab fa-html5 text-orange-500 credit-icon"></i> <span><strong>HTML5</strong>: Semantic, accessible structure.</span></li>
+                            <li class="credit-item"><i class="fas fa-wind text-cyan-500 credit-icon"></i> <span><strong>Tailwind CSS</strong>: Utility-first, professional responsiveness.</span></li>
+                            <li class="credit-item"><i class="fab fa-js-square text-yellow-500 credit-icon"></i> <span><strong>Vanilla JavaScript</strong>: Core logic, interactions, and high performance.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="credit-card flex-1 min-w-[45%] md:min-w-[300px]">
+                    <div class="parallax-inner">
+                        <h3 class="text-xl font-semibold mb-3 border-b border-cyan-700 pb-2 text-cyan-300">Backend & Platform</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="credit-item"><i class="fab fa-node-js text-green-500 credit-icon"></i> <span><strong>Node.js</strong>: Used for robust <strong>Discord bots</strong> and utility servers.</span></li>
+                            <li class="credit-item"><i class="fab fa-github text-gray-400 credit-icon"></i> <span><strong>GitHub Pages</strong>: Reliable, high-speed static hosting.</span></li>
+                            <li class="credit-item"><i class="fas fa-server text-indigo-400 credit-icon"></i> <span><strong>Core Hosting</strong>: InfinityFree (for main PHP apps).</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-400 mt-10 text-lg">
+                All projects are developed by Ranjan, a developer dedicated to clean code architecture and performance engineering.
+            </p>
+        </section>
+        
+    </main>
+
+    <footer class="relative z-10 text-center text-gray-500 mt-16">
+        <p>&copy; <span id="current-year"></span> Aloo Khalo. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>
